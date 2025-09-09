@@ -35,30 +35,31 @@ export default function ServerDropdown() {
                     }`} />
             </button>
 
-            {isOpen && (
-                <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 z-50">
-                    <div className="py-2">
-                        {serverOptions.map((option, index) => {
-                            const IconComponent = option.icon;
-                            return (
-                                <Link
-                                    key={index}
-                                    href={`#${option.title.toLowerCase()}`}
-                                    className="flex items-center space-x-3 px-4 py-3 hover:bg-gray-50 transition-colors duration-200 group"
-                                    onClick={closeDropdown}
-                                >
-                                    <div className="flex-shrink-0">
-                                        <IconComponent className="h-5 w-5 text-gray-700 " />
-                                    </div>
-                                    <span className="text-sm font-medium text-gray-900 ">
-                                        {option.title}
-                                    </span>
-                                </Link>
-                            );
-                        })}
-                    </div>
+            <div className={`absolute -left-[60px] top-full mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 z-50 transition-all duration-300 ease-in-out overflow-hidden ${isOpen ? 'opacity-100 translate-y-0 max-h-48' : 'opacity-0 -translate-y-2 max-h-0 pointer-events-none'
+                }`}>
+                <div className="py-2">
+                    {serverOptions.map((option, index) => {
+                        const IconComponent = option.icon;
+                        return (
+                            <Link
+                                key={index}
+                                href={`#${option.title.toLowerCase()}`}
+                                className={`flex items-center space-x-3 px-4 py-3 hover:bg-gray-50 transition-all duration-200 group transform ${isOpen ? 'translate-y-0 opacity-100' : 'translate-y-2 opacity-0'
+                                    }`}
+                                style={{ transitionDelay: isOpen ? `${index * 100}ms` : '0ms' }}
+                                onClick={closeDropdown}
+                            >
+                                <div className="flex-shrink-0">
+                                    <IconComponent className="h-5 w-5 font-bold text-gray-700 transition-colors duration-200" />
+                                </div>
+                                <span className="text-sm font-bold text-gray-500">
+                                    {option.title}
+                                </span>
+                            </Link>
+                        );
+                    })}
                 </div>
-            )}
+            </div>
         </div>
     );
 }
