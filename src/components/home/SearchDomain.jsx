@@ -25,9 +25,9 @@ const SearchDomain = () => {
                 {/* Heading */}
 
 
-                <div className='flex justify-between w-full items-center gap-8'>
-                    <div className='w-full space-y-5'>
-                        <h2 className="text-3xl font-bold text-gray-900 ">
+                <div className='flex lg:flex-row flex-col  justify-between  items-center gap-8'>
+                    <div className=' space-y-5'>
+                        <h2 className="lg:text-3xl text-2xl font-bold text-gray-900 ">
                             Search your Domain Name
                         </h2>
 
@@ -68,7 +68,7 @@ const SearchDomain = () => {
 
                     </div>
 
-                    <div className='w-full'>
+                    <div className='flex lg:justify-end'>
                         <Image src={com} alt='com' width={400} height={300} />
                     </div>
                 </div>
