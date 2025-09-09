@@ -1,4 +1,6 @@
 import ControlPanel from "@/components/home/ControlPanel";
+import HappyCustomer from "@/components/home/HappyCustomer";
+import HaveQuestions from "@/components/home/HaveQuestions";
 import Hero from "@/components/home/hero";
 
 export default function Home() {
@@ -7,6 +9,8 @@ export default function Home() {
       <Hero />
 
       <ControlPanel />
+      <HaveQuestions/>
+      <HappyCustomer/>
     </div>
   );
 }
