@@ -34,7 +34,9 @@ export default function Hero() {
                         {/* CTA Button */}
                         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
                             <button className="group w-full sm:w-auto cursor-pointer bg-white text-gray-600 font-semibold px-6 sm:px-8 py-3 sm:py-4    rounded-full border border-gray-300 hover:bg-gray-100    transition-transform duration-300 ease-in-out    flex items-center justify-center text-sm sm:text-base lg:text-[17px]   hover:scale-105">
-                                Start My Hosting Now
+                                <span className=' pr-3 '>
+                                    Start My Hosting Now
+                                </span>
                                 <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="w-4 h-4 sm:w-5 sm:h-5 text-gray-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"></path></svg>
                             </button>
 
