@@ -26,7 +26,7 @@ const SearchDomain = () => {
 
 
                 <div className='flex lg:flex-row flex-col  justify-between  items-center gap-8'>
-                    <div className=' space-y-5'>
+                    <div className=' p-5 lg:p-0 space-y-5'>
                         <h2 className="lg:text-3xl text-2xl font-bold text-gray-900 ">
                             Search your Domain Name
                         </h2>
