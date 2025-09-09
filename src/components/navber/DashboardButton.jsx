@@ -7,7 +7,7 @@ export default function DashboardButton() {
         <div className="hidden md:block">
             <Link
                 href="#dashboard"
-                className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+                className="bg-gradient-to-r from-blue-700 to-blue-600 text-white px-6 py-4 rounded-lg font-semibold text-[15px] hover:from-blue-600 hover:to-blue-500 transition cursor-pointer"
             >
                 Dashboard
             </Link>
