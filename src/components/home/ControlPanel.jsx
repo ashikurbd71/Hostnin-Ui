@@ -8,7 +8,7 @@ const ControlPanel = () => {
   const [activeTab, setActiveTab] = useState("cPanel");
 
   return (
-    <div className="mx-auto max-w-7xl">
+    <div className="mx-auto mt-20 max-w-7xl">
       <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center text-[#13205A] mb-4">
         User-Friendly Control Panel
       </h1>

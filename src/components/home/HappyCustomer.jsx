@@ -10,7 +10,7 @@ import arrow from "@/assets/arrow-dark.webp";
 const HappyCustomer = () => {
   return (
     <div className="pb-5">
-      <div className="flex flex-col items-center justify-center gap-8 py-5 mx-auto lg:flex-row lg:gap-8 md:pb-5 sm:px-6 max-w-7xl">
+      <div className="flex flex-col items-center justify-center gap-8 py-5 mx-auto lg:flex-row lg:gap-8 md:pb-5 max-w-7xl">
         <div className="relative flex flex-col items-start w-full lg:flex-1">
           <div className="absolute block z-10 left-10 top-40 sm:top-48 -translate-x-1/2 -translate-y-1/2 w-96 sm:w-[360px] lg:w-[450px] lg:h-[450px] h-96 sm:h-[360px] bg-gray-100 rounded-full"></div>
 
@@ -99,6 +99,10 @@ const HappyCustomer = () => {
               <span>More Review</span>
             </div>
           </div>
+        </div>
+        
+        <div className="">
+          
         </div>
       </div>
     </div>

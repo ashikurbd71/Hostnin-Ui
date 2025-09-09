@@ -1,12 +1,11 @@
 'use client';
 
+import { useState } from 'react';
 import { ChevronDown, Building, FileText, Briefcase, Phone } from 'lucide-react';
 import Link from 'next/link';
-import { useDropdown } from './DropdownContext';
 
-export default function AboutDropdown() {
-    const { activeDropdown, toggleDropdown, closeDropdown } = useDropdown();
-    const isOpen = activeDropdown === 'about';
+export default function MobileAboutDropdown({ onClose }) {
+    const [isOpen, setIsOpen] = useState(false);
 
     const aboutOptions = [
         {
@@ -29,40 +28,40 @@ export default function AboutDropdown() {
     ];
 
     const handleToggle = () => {
-        toggleDropdown('about');
+        setIsOpen(!isOpen);
     };
 
     return (
-        <div className="relative group">
+        <div className="w-full">
             <button
                 onClick={handleToggle}
-                className={`text-gray-700 font-semibold hover:text-blue-600 px-3 py-2 text-md  transition-colors duration-200 flex items-center ${isOpen ? 'text-blue-600' : ''
+                className={`w-full text-left text-gray-700 hover:text-blue-600 px-3 py-2 text-base font-medium flex items-center justify-between transition-colors duration-200 border-b border-gray-200 ${isOpen ? 'text-blue-600' : ''
                     }`}
             >
                 About
-                <ChevronDown className={`ml-1 h-3 w-3 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''
+                <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''
                     }`} />
             </button>
 
-            <div className={`absolute -left-[80px] top-full mt-2 w-56 bg-white rounded-lg shadow-lg border border-gray-200 z-50 transition-all duration-300 ease-in-out overflow-hidden ${isOpen ? 'opacity-100 translate-y-0 max-h-64' : 'opacity-0 -translate-y-2 max-h-0 pointer-events-none'
+            <div className={`overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'
                 }`}>
-                <div className="py-2">
+                <div className="pl-6 space-y-1">
                     {aboutOptions.map((option, index) => {
                         const IconComponent = option.icon;
                         return (
                             <Link
                                 key={index}
                                 href={`#${option.title.toLowerCase().replace(/\s+/g, '-')}`}
-                                className={`flex items-center justify-between px-4 py-3 hover:bg-gray-50 transition-all duration-200 group transform ${isOpen ? 'translate-y-0 opacity-100' : 'translate-y-2 opacity-0'
+                                className={`flex items-center justify-between p-2 rounded-lg hover:bg-gray-50 transition-all duration-200 group transform ${isOpen ? 'translate-y-0 opacity-100' : 'translate-y-2 opacity-0'
                                     }`}
                                 style={{ transitionDelay: isOpen ? `${index * 80}ms` : '0ms' }}
-                                onClick={closeDropdown}
+                                onClick={onClose}
                             >
                                 <div className="flex items-center space-x-3">
                                     <div className="flex-shrink-0">
-                                        <IconComponent className="h-5 w-5 font-bold text-gray-700 transition-colors duration-200" />
+                                        <IconComponent className="h-4 w-4 font-bold text-gray-600 hover:text-blue-600 transition-colors duration-200" />
                                     </div>
-                                    <span className="text-sm font-bold text-gray-500">
+                                    <span className="text-sm font-medium text-gray-700">
                                         {option.title}
                                     </span>
                                 </div>
