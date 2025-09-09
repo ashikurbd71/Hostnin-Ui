@@ -21,7 +21,11 @@ export default function RootLayout({ children }) {
         className={`${montserrat.variable}  antialiased`}
       >
         <Navbar />
-        {children}
+
+        <div className="min-h-screen">
+          {children}
+        </div>
+
         <Footer />
       </body>
     </html>
