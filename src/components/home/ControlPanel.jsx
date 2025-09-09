@@ -8,7 +8,7 @@ const ControlPanel = () => {
   const [activeTab, setActiveTab] = useState("cPanel");
 
   return (
-    <div className="mx-auto mt-20 max-w-7xl">
+    <div className="mx-auto font-sans mt-20 max-w-7xl">
       <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center text-[#13205A] mb-4">
         User-Friendly Control Panel
       </h1>
@@ -20,31 +20,28 @@ const ControlPanel = () => {
       <div className="flex justify-center mb-10 space-x-8 border-b border-gray-200">
         <button
           onClick={() => setActiveTab("cPanel")}
-          className={`${
-            activeTab === "cPanel"
-              ? "py-2 px-3 sm:py-3 sm:px-6 m-1 text-lg sm:text-lg font-bold transition-colors duration-200 rounded text-blue-600 border-b-2 border-blue-600 cursor-pointer "
-              : "py-2 px-3 sm:py-3 sm:px-6 m-1 text-lg sm:text-lg font-bold transition-colors duration-200 rounded text-gray-500 hover:text-gray-700 cursor-pointer"
-          }`}
+          className={`${activeTab === "cPanel"
+            ? "py-2 px-3 sm:py-3 sm:px-6 m-1 text-lg sm:text-lg font-bold transition-colors duration-200 rounded text-blue-600 border-b-2 border-blue-600 cursor-pointer "
+            : "py-2 px-3 sm:py-3 sm:px-6 m-1 text-lg sm:text-lg font-bold transition-colors duration-200 rounded text-gray-500 hover:text-gray-700 cursor-pointer"
+            }`}
         >
           cPanel
         </button>
         <button
           onClick={() => setActiveTab("Webuzo")}
-          className={`pb-2 text-lg font-medium transition-colors duration-200 ${
-            activeTab === "Webuzo"
-              ? "py-2 px-3 sm:py-3 sm:px-6 m-1 text-lg sm:text-lg font-bold transition-colors duration-200 rounded text-blue-600 border-b-2 border-blue-600 cursor-pointer "
-              : "py-2 px-3 sm:py-3 sm:px-6 m-1 text-lg sm:text-lg font-bold transition-colors duration-200 rounded text-gray-500 hover:text-gray-700 cursor-pointer"
-          }`}
+          className={`pb-2 text-lg font-medium transition-colors duration-200 ${activeTab === "Webuzo"
+            ? "py-2 px-3 sm:py-3 sm:px-6 m-1 text-lg sm:text-lg font-bold transition-colors duration-200 rounded text-blue-600 border-b-2 border-blue-600 cursor-pointer "
+            : "py-2 px-3 sm:py-3 sm:px-6 m-1 text-lg sm:text-lg font-bold transition-colors duration-200 rounded text-gray-500 hover:text-gray-700 cursor-pointer"
+            }`}
         >
           Webuzo
         </button>
         <button
           onClick={() => setActiveTab("StackCP")}
-          className={`pb-2 text-lg font-medium transition-colors duration-200 ${
-            activeTab === "StackCP"
-              ? "py-2 px-3 sm:py-3 sm:px-6 m-1 text-lg sm:text-lg font-bold transition-colors duration-200 rounded text-blue-600 border-b-2 border-blue-600 cursor-pointer "
-              : "py-2 px-3 sm:py-3 sm:px-6 m-1 text-lg sm:text-lg font-bold transition-colors duration-200 rounded text-gray-500 hover:text-gray-700 cursor-pointer"
-          }`}
+          className={`pb-2 text-lg font-medium transition-colors duration-200 ${activeTab === "StackCP"
+            ? "py-2 px-3 sm:py-3 sm:px-6 m-1 text-lg sm:text-lg font-bold transition-colors duration-200 rounded text-blue-600 border-b-2 border-blue-600 cursor-pointer "
+            : "py-2 px-3 sm:py-3 sm:px-6 m-1 text-lg sm:text-lg font-bold transition-colors duration-200 rounded text-gray-500 hover:text-gray-700 cursor-pointer"
+            }`}
         >
           StackCP
         </button>

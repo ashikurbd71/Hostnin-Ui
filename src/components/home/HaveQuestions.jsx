@@ -3,7 +3,7 @@ import React from "react";
 const HaveQuestions = () => {
   return (
     <div>
-      <div class="relative w-full max-w-7xl mx-auto my-20 md:rounded-2xl bg-gradient-to-r from-[#00146b] to-[#0026b3] px-8 py-10 flex flex-col items-center shadow-xl overflow-hidden">
+      <div class="relative w-full font-sans max-w-7xl mx-auto my-20 md:rounded-2xl bg-gradient-to-r from-[#00146b] to-[#0026b3] px-8 py-10 flex flex-col items-center shadow-xl overflow-hidden">
         <div class="absolute top-0 left-0 w-40 h-40 bg-blue-900/30 rounded-full -translate-x-1/3 -translate-y-1/3 pointer-events-none"></div>
         <div class="absolute bottom-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full translate-x-1/4 translate-y-1/4 pointer-events-none"></div>
         <div class="absolute top-6 right-12 grid grid-cols-4 gap-1 opacity-40 pointer-events-none">
