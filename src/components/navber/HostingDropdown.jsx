@@ -49,7 +49,7 @@ export default function HostingDropdown() {
         <div className="relative group">
             <button
                 onClick={handleToggle}
-                className={`text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200 flex items-center ${isOpen ? 'text-blue-600' : ''
+                className={`text-gray-700 font-semibold hover:text-blue-600 px-3 py-2 text-md  transition-colors duration-200 flex items-center ${isOpen ? 'text-blue-600' : ''
                     }`}
             >
                 Hosting
